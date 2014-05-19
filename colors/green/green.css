@@ -9,12 +9,19 @@ a.button_11, a.button_12{color:#FFFFFF;}
 
 /* Google web font
 /*------------------------------------------*/
-h1, h2, h3, h4, h5, h6, .logo, .image_caption, a.button_12, a.button_11, .trigger a, .trigger_blog a, .post_left, .post_right_unreveal, #loadMore, #showLess, a.backtoblog, .form label, .form_submit, a.call_button, a.map_button{font-family: 'Lato', sans-serif;}
+/*FONTS*/
+@font-face {
+  font-family: 'droidkufi';
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/droidkufi.woff") format('woff'), url("../fonts/droidkufi.ttf") format('truetype');
+}
+h1, h2, h3, h4, h5, h6, .logo, .image_caption, a.button_12, a.button_11, .trigger a, .trigger_blog a, .post_left, .post_right_unreveal, #loadMore, #showLess, a.backtoblog, .form label, .form_submit, a.call_button, a.map_button{font-family:'droidkufi', 'Lato', sans-serif;}
 h2.page_title{color:#5e5e5e;}
 
 /* Menu style
 /*------------------------------------------*/
-.menu{ width:100%; padding:0px;margin:0px 0 50px 0;}
+.menu{ width:100%; padding:0px;margin:10% 0 50px 0;}
 .menu ul{ list-style:none; padding:0px; margin:0px; width:100%;}
 .menu ul li{ list-style:none; margin:1% 0 2% 4%; padding:5.5% 0; width:28%;height:auto; float:left; display:block; text-align:center;
 background-image: url(images/transparent_circle.png);

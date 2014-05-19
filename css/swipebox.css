@@ -1,3 +1,11 @@
+/*FONTS*/
+@font-face {
+  font-family: 'droidkufi';
+  font-style: normal;
+  font-weight: 400;
+  src: url("fonts/droidkufi.woff") format('woff'), url("fonts/droidkufi.ttf") format('truetype');
+}
+
 html.swipebox {
   overflow: hidden!important;
 }
@@ -258,7 +266,7 @@ html.swipebox {
   color: white!important;
   font-size: 15px;
   line-height: 43px;
-  font-family: Helvetica, Arial, sans-serif;
+  font-family:'droidkufi' Helvetica, Arial, sans-serif;
 }
 
 
