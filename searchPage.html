@@ -1,0 +1,73 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+  <script src="js/jquery-1.10.1.min.js"></script>
+</head>
+
+<body>
+<form name="form1" method="post" action="">
+  <p>
+    <label for="list1">نام شهر</label>
+    <select name="list1" id="list1">
+      <option>تهران</option>
+      <option>مشهد</option>
+      <option>اصفهان</option>
+      <option>شیراز</option>
+    </select>
+    <script>
+	
+	</script>
+  </p>
+  <p>
+    <label for="list2">نوع تور</label>
+    <select name="list2" id="list2">
+      <option>داخلی</option>
+      <option>خارجی</option>
+    </select>
+  </p>
+  <p>
+    <label for="list3">تور های داخلی</label>
+    <select name="list3" id="list3">
+      <option>کیش</option>
+      <option>اصفهان</option>
+      <option>شیراز</option>
+      <option>کویر</option>
+    </select>
+  </p>
+  <p class="list4">
+    <label for="list4">تور های خارجی</label>
+    <select name="list4" id="list4">
+      <option selected>دبی</option>
+      <option>آنتالیا</option>
+    </select>
+  </p>
+</form>
+
+<p id="mode1">lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, deleniti neque perspiciatis nemo sint eius facere quos asperiores quam soluta ipsa at? Accusamus, repudiandae, ratione, vitae quia dicta at ad odio voluptatum optio id hic quidem officiis a modi ex eligendi excepturi soluta voluptas quae perferendis. Laborum debitis voluptatum molestiae.</p>
+<p id="mode2">Porro, ut, consequatur quis fugiat deleniti deserunt et dolores amet corrupti blanditiis alias ab iste quibusdam veritatis exercitationem aliquam expedita quisquam quasi provident quos cupiditate labore nihil. Assumenda, ullam amet repellat nesciunt commodi? Nemo, ipsum, recusandae molestiae vero ipsa necessitatibus error similique numquam molestias nesciunt voluptates sed excepturi eius totam enim dolore quos cum maxime. Odit, voluptatem neque suscipit mollitia doloribus cupiditate vitae corrupti doloremque ab qui maiores eos debitis perferendis. Ipsum accusamus excepturi blanditiis nam nostrum ex!</p>
+<p id="mode3">lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, deleniti neque perspiciatis nemo sint eius facere quos asperiores quam soluta ipsa at? Accusamus, repudiandae, ratione, vitae quia dicta at ad odio voluptatum optio id hic quidem officiis a modi ex eligendi excepturi soluta voluptas quae perferendis. Laborum debitis voluptatum molestiae.</p>
+<p id="mode4">Porro, ut, consequatur quis fugiat deleniti deserunt et dolores amet corrupti blanditiis alias ab iste quibusdam veritatis exercitationem aliquam expedita quisquam quasi provident quos cupiditate labore nihil. Assumenda, ullam amet repellat nesciunt commodi? Nemo, ipsum, recusandae molestiae vero ipsa necessitatibus error similique numquam molestias nesciunt voluptates sed excepturi eius totam enim dolore quos cum maxime. Odit, voluptatem neque suscipit mollitia doloribus cupiditate vitae corrupti doloremque ab qui maiores eos debitis perferendis. Ipsum accusamus excepturi blanditiis nam nostrum ex!</p>
+  
+  <script type="text/javascript">
+    (function(){
+
+      var whichSelected = function(){
+        if($('#list1 option:selected').text() =="تهران" && $('#list2 option:selected').text() =="داخلی"){
+          $('.list4').css('display', 'none');
+        }
+      }
+
+      
+      init = function(){
+        whichSelected();
+      }
+
+      $(init);
+
+    })();
+  </script>
+
+</body>
+</html>
