@@ -8,7 +8,7 @@
 
 <body>
 <form name="form1" method="post" action="">
-  <p>
+  <p class="list1">
     <label for="list1">نام شهر</label>
     <select name="list1" id="list1">
       <option>تهران</option>
@@ -20,14 +20,14 @@
 	
 	</script>
   </p>
-  <p>
+  <p class="list2">
     <label for="list2">نوع تور</label>
     <select name="list2" id="list2">
       <option>داخلی</option>
       <option>خارجی</option>
     </select>
   </p>
-  <p>
+  <p class="list3">
     <label for="list3">تور های داخلی</label>
     <select name="list3" id="list3">
       <option>کیش</option>
@@ -36,7 +36,7 @@
       <option>کویر</option>
     </select>
   </p>
-  <p class="list4">
+  <p class="list4" style="display: none;">
     <label for="list4">تور های خارجی</label>
     <select name="list4" id="list4">
       <option selected>دبی</option>
@@ -45,23 +45,35 @@
   </p>
 </form>
 
-<p id="mode1">lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, deleniti neque perspiciatis nemo sint eius facere quos asperiores quam soluta ipsa at? Accusamus, repudiandae, ratione, vitae quia dicta at ad odio voluptatum optio id hic quidem officiis a modi ex eligendi excepturi soluta voluptas quae perferendis. Laborum debitis voluptatum molestiae.</p>
-<p id="mode2">Porro, ut, consequatur quis fugiat deleniti deserunt et dolores amet corrupti blanditiis alias ab iste quibusdam veritatis exercitationem aliquam expedita quisquam quasi provident quos cupiditate labore nihil. Assumenda, ullam amet repellat nesciunt commodi? Nemo, ipsum, recusandae molestiae vero ipsa necessitatibus error similique numquam molestias nesciunt voluptates sed excepturi eius totam enim dolore quos cum maxime. Odit, voluptatem neque suscipit mollitia doloribus cupiditate vitae corrupti doloremque ab qui maiores eos debitis perferendis. Ipsum accusamus excepturi blanditiis nam nostrum ex!</p>
-<p id="mode3">lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, deleniti neque perspiciatis nemo sint eius facere quos asperiores quam soluta ipsa at? Accusamus, repudiandae, ratione, vitae quia dicta at ad odio voluptatum optio id hic quidem officiis a modi ex eligendi excepturi soluta voluptas quae perferendis. Laborum debitis voluptatum molestiae.</p>
-<p id="mode4">Porro, ut, consequatur quis fugiat deleniti deserunt et dolores amet corrupti blanditiis alias ab iste quibusdam veritatis exercitationem aliquam expedita quisquam quasi provident quos cupiditate labore nihil. Assumenda, ullam amet repellat nesciunt commodi? Nemo, ipsum, recusandae molestiae vero ipsa necessitatibus error similique numquam molestias nesciunt voluptates sed excepturi eius totam enim dolore quos cum maxime. Odit, voluptatem neque suscipit mollitia doloribus cupiditate vitae corrupti doloremque ab qui maiores eos debitis perferendis. Ipsum accusamus excepturi blanditiis nam nostrum ex!</p>
-  
   <script type="text/javascript">
 
     (function(){
       var whichSelected = function(){
 
-        $('#list1').change(function() {
-          $('#list1 option:selected').$.each(function() {
-             if($(this).text('تهران') && $('#list2 option:selected').text('داخلی')){
-              $('#list3').css({
+        $('#list2').change(function() {
+          $('#list2 option:selected').each(function() {
+
+            if($(this).text() === 'داخلی'){
+
+              $('.list4').css({
                 display: 'none',
               });
-             }
+              $('.list3').css({
+                display: 'block',
+              });
+            }
+
+            if($(this).text() === 'خارجی'){
+
+              $('.list4').css({
+                display: 'block',
+              });
+
+              $('.list3').css({
+                display: 'none',
+              });
+            }
+
           });
         });
       },
