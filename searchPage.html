@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <title>Untitled Document</title>
-  <script src="js/jquery-1.10.1.min.js"></script>
+  <script src="js/jquery.min.js"></script>
 </head>
 
 <body>
@@ -51,15 +51,20 @@
 <p id="mode4">Porro, ut, consequatur quis fugiat deleniti deserunt et dolores amet corrupti blanditiis alias ab iste quibusdam veritatis exercitationem aliquam expedita quisquam quasi provident quos cupiditate labore nihil. Assumenda, ullam amet repellat nesciunt commodi? Nemo, ipsum, recusandae molestiae vero ipsa necessitatibus error similique numquam molestias nesciunt voluptates sed excepturi eius totam enim dolore quos cum maxime. Odit, voluptatem neque suscipit mollitia doloribus cupiditate vitae corrupti doloremque ab qui maiores eos debitis perferendis. Ipsum accusamus excepturi blanditiis nam nostrum ex!</p>
   
   <script type="text/javascript">
+
     (function(){
-
       var whichSelected = function(){
-        if($('#list1 option:selected').text() =="تهران" && $('#list2 option:selected').text() =="داخلی"){
-          $('.list4').css('display', 'none');
-        }
-      }
 
-      
+        $('#list1').change(function() {
+          $('#list1 option:selected').$.each(function() {
+             if($(this).text('تهران') && $('#list2 option:selected').text('داخلی')){
+              $('#list3').css({
+                display: 'none',
+              });
+             }
+          });
+        });
+      },
       init = function(){
         whichSelected();
       }
